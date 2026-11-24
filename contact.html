@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Chocobar</title>
+  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="contact.css">
+</head>
+
+<body>
+  <header class="header">
+    <nav class="navbar">
+      <ul class="nav-links">
+        <li><a href="index.css">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    <li><a href="products.html">Products</a></li>  
+    </ul>
+
+      <a href="cart.html" class="cart-link" aria-label="View Cart">
+        <svg xmlns="http://w3.org" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="9" cy="21" r="1"></circle>
+          <circle cx="20" cy="21" r="1"></circle>
+          <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+        </svg>
+      </a>
+    </nav>
+    <h1>Contact Us</h1>
+  </header>
+
+  <main>
+    <section class="contact-wrapper">
+      <!-- Left Side: Store & Gifting Info -->
+      <div class="contact-info">
+        <h2>Get in Touch</h2>
+        <p>
+          Have a question about our ingredients, nationwide delivery, or custom corporate &amp; wedding gift boxes? Send us a message and our chocolatiers will get back to you within 24 hours.
+        </p>
+
+        <div class="info-item">
+          <h4>Boutique &amp; Kitchen</h4>
+          <p>42 Cocoa Lane, Grafton Quarter, Dublin 2</p>
+        </div>
+
+        <div class="info-item">
+          <h4>Email &amp; Phone</h4>
+          <p>orders@://example.com<br>+353 (01) 555-0194</p>
+        </div>
+
+        <div class="info-item">
+          <h4>Opening Hours</h4>
+          <p>Monday – Saturday: 9:00 AM – 7:00 PM<br>Sunday: 11:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+
+      <!-- Right Side: Inquiry Form -->
+      <div class="contact-form-box">
+        <h3>Send Us a Message</h3>
+        <form onsubmit="submitContactForm(event)">
+          <div class="form-group">
+            <label for="contact-name">Your Name</label>
+            <input type="text" id="contact-name" placeholder="Enter your full name" required>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-email">Email Address</label>
+            <input type="email" id="contact-email" placeholder="you@example.com" required>
+          </div>
+
+          <div class="form-group">
+            <label for="inquiry-type">Inquiry Topic</label>
+            <select id="inquiry-type">
+              <option value="general">General Question</option>
+              <option value="corporate">Corporate &amp; Bulk Gifting</option>
+              <option value="custom-box">Custom Event / Wedding Box</option>
+              <option value="delivery">Order &amp; Delivery Support</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="contact-message">Message</label>
+            <textarea id="contact-message" rows="5" placeholder="How can we sweeten your day?" required></textarea>
+          </div>
+
+          <button type="submit">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- Quick FAQ Strip -->
+    <section class="faq-section">
+      <h2>Frequently Asked Questions</h2>
+      <div class="faq-grid">
+        <div class="faq-card">
+          <h4>Do you offer custom gift wrapping?</h4>
+          <p>Yes! Every gift box can be finished with a satin ribbon and a personalized message card at checkout.</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>Are your chocolates nut-free?</h4>
+          <p>While we offer pure dark and milk varieties, all chocolates are crafted in a kitchen that handles hazelnuts, almonds, and pistachios.</p>
+        </div>
+
+        <div class="faq-card">
+          <h4>How should I store my chocolates?</h4>
+          <p>Store in a cool, dry place between 15°C and 18°C away from direct sunlight—avoid refrigerating to preserve the glossy snap.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Chocobar. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function submitContactForm(event) {
+      event.preventDefault();
+      const name = document.getElementById("contact-name").value;
+      alert(`Thank you, ${name}! Your message has been received. We will reply shortly.`);
+      event.target.reset();
+    }
+  </script>
+</body>
+
+</html>
